@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HousesComponent } from './pages/houses/houses.component';
+import { HouseComponent } from './component/house/house.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HousesComponent,
+    HouseComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
