@@ -1,27 +1,20 @@
 # CenGot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+Este proyecto fue desarrollado en lenguage TypeScript con el Framework Angular 7
 
-## Development server
+## Pre-Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para poder correr este proyecto es necesario tener instalada una version de **NodeJs 8** o puperior.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Levantas APP en local
 
-## Build
+Para levantar la aplicacion de forma local primero se debe instalar las dependencias del proyecto con el comando `npm i` desde la carpeta raiz.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Una vez instaladas las dependencias del proyeto debe ejecutar el comando `npm start` desde la raiz del proyecto. Esto levantara un servidor local en el puerto 4200 y podra acceder a la aplicación desde la URL `http://localhost:4200/`.
 
-## Running unit tests
+## Test Unitarios
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para correr los test unitarios debe correr desde la carpeta raiz el comando `npm test`. Al finalizar puede revisar el reporte de covertura en la ruta `/coverage/cen-got/index.html`
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
