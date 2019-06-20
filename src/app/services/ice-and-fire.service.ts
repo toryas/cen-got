@@ -40,13 +40,9 @@ export class IceAndFireService {
    */
   getHousesById(id) {
     return this.http.get(`${this.basePath}/houses/${id}`).pipe(
-      map(async data => {
-        let array: House[] = new Array();
-        for (let index in data) {
-          let { name, region, words, currentLord } = data[index];
-          array.push(new House(name, region, words, currentLord))
-        }
-        return array;
+      map((data:any) => {
+          let { name, region, words, currentLord } = data;
+          return new House(name, region, words, currentLord);
       }))
   }
 
