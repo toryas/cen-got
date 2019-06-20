@@ -19,6 +19,7 @@ export class IceAndFireService {
   /**
    * Obtiene listado de casas desde API anapioficeandfire
    * 
+   * @param {number} page indicado de pagina
    * @returns {House[]}
    */
   getAllHouses(page=1) {
@@ -62,6 +63,7 @@ export class IceAndFireService {
 
   /**
    * Obtiene lista de todos los personajes.
+   * @param {number} page indicado de pagina
    * @returns {Character[]} Array de personajes
    */
   getAllCharacters(page=1){
