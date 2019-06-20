@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { House } from 'src/app/domain/house.domain';
 
 @Component({
-  selector: 'app-house',
+  selector: 'comp-house',
   templateUrl: './house.component.html',
   styleUrls: ['./house.component.scss']
 })
 export class HouseComponent implements OnInit {
 
-  public house:House;
+  @Input() house:House; 
 
   constructor() { }
 

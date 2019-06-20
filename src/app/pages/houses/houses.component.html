@@ -1,6 +1,5 @@
-<div>
-  <div *ngFor="let house of houses" >
-    {{house.name}}
+<div class="board" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="300" (scrolled)="onBottom()">
+  <div *ngFor="let house of houses">
+    <comp-house [house]=house></comp-house>
   </div>
-  <app-house></app-house>
 </div>
