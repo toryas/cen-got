@@ -17,11 +17,20 @@ export class Character {
         this.culture = culture;
         this.born = born;
         this.died = died;
-        this.titles = titles;
-        this.aliases = aliases;
+        this.titles = this.clearArray(titles);
+        this.aliases = this.clearArray(aliases);
         this.father = father;
         this.mother = mother;
         this.spouse = spouse;
-        this.allegiances = allegiances;
+        this.allegiances =  this.clearArray(allegiances);
+    }
+
+    clearArray(array) {
+        if (array.length === 1) {
+            if (array[0] === "") {
+                return [];
+            }
+        }
+        return array;
     }
 }

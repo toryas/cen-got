@@ -1,0 +1,58 @@
+<div class="card-detail">
+  <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+    <span>&times;</span>
+  </button>
+  <div>
+    <img src="{{(character.gender == 'Male')?'assets/ph.png':'assets/pm.png'}}">
+  </div>
+  <div class="card__container">
+    <form>
+      <div class="form-group row">
+        <label *ngIf="character.name" class="col-sm-2 col-form-label">Name:</label>
+        <div *ngIf="character.name" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.name}}">
+        </div>
+        <label *ngIf="character.aliases.length > 0" class="col-sm-2 col-form-label">Aliases:</label>
+        <div *ngIf="character.aliases.length > 0" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.aliases}}">
+        </div>
+        <label *ngIf="character.gender" class="col-sm-2 col-form-label">Gender:</label>
+        <div *ngIf="character.gender" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.gender}}">
+        </div>
+        <label *ngIf="character.culture" class="col-sm-2 col-form-label">Culture:</label>
+        <div *ngIf="character.culture" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.culture}}">
+        </div>
+        <label *ngIf="character.born" class="col-sm-2 col-form-label">Born:</label>
+        <div *ngIf="character.born" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.born}}">
+        </div>
+        <label *ngIf="character.titles.length > 0" class="col-sm-2 col-form-label">Titles:</label>
+        <div *ngIf="character.titles.length > 0" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.titles}}">
+        </div>
+        <label *ngIf="character.died" class="col-sm-2 col-form-label">Died:</label>
+        <div *ngIf="character.died" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.died}}">
+        </div>
+        <label *ngIf="character.father" class="col-sm-2 col-form-label">Father:</label>
+        <div *ngIf="character.father" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{fatherName}}">
+        </div>
+        <label *ngIf="character.mother" class="col-sm-2 col-form-label">Mother:</label>
+        <div *ngIf="character.mother" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{motherName}}">
+        </div>
+        <label *ngIf="character.spouse" class="col-sm-2 col-form-label">Spouse:</label>
+        <div *ngIf="character.spouse" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{spouseName}}">
+        </div>
+        <label *ngIf="character.allegiances.length > 0" class="col-sm-2 col-form-label">Allegiances:</label>
+        <div *ngIf="character.allegiances.length > 0" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{character.allegiances}}">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="card-detail">
+  <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+    <span>&times;</span>
+  </button>
+  <div>
+    <img src="assets/gcc.png">
+  </div>
+  <div class="card__container">
+    <form>
+      <div class="form-group row">
+        <label *ngIf="house.name" class="col-sm-2 col-form-label">Name:</label>
+        <div *ngIf="house.name" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{house.name}}">
+        </div>
+        <label *ngIf="house.region" class="col-sm-2 col-form-label">Region:</label>
+        <div *ngIf="house.region" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{house.region}}">
+        </div>
+        <label *ngIf="house.words" class="col-sm-2 col-form-label">Words:</label>
+        <div *ngIf="house.words" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{house.words}}">
+        </div>
+        <label *ngIf="house.currentLord" class="col-sm-2 col-form-label">Current Lord:</label>
+        <div *ngIf="house.currentLord" class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{currentLordName}}">
+        </div>
+        <div class="spinner-border" role="status" *ngIf="!currentLordName && house.currentLord">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

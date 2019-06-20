@@ -23,7 +23,6 @@ export class HousesComponent implements OnInit {
    */
   loadHouses() {
     this.iaf.getAllHouses(this.page).subscribe(data => {
-      console.log(data);
       this.houses.push(...data)
     });
   }

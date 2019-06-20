@@ -63,4 +63,20 @@ export class IceAndFireService {
       })
     )
   }
+
+  /**
+   * Obtiene lista de todos los personajes.
+   * @returns {Character[]} Array de personajes
+   */
+  getAllCharacters(page=1){
+    return this.http.get(`${this.basePath}/characters?page=${page}&pageSize=50`).pipe(
+      map(data => {
+        let array: Character[] = new Array();
+        for (let index in data) {
+          let { name, gender, culture, born, died, titles, aliases, father, mother, spouse, allegiances } = data[index];
+          array.push(new Character(name, gender, culture, born, died, titles, aliases, father, mother, spouse, allegiances))
+        }
+        return array;
+      }))
+  }
 }

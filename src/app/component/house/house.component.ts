@@ -1,18 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { House } from 'src/app/domain/house.domain';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HouseDetailComponent } from '../house-detail/house-detail.component';
 
 @Component({
   selector: 'comp-house',
   templateUrl: './house.component.html',
   styleUrls: ['./house.component.scss']
 })
-export class HouseComponent implements OnInit {
+export class HouseComponent {
 
-  @Input() house:House; 
+  @Input() house: House;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
-  ngOnInit() {
+  /**
+   * Levanta model de detalle de casa
+   */
+  toDetail() {
+    const modalRef = this.modalService.open(HouseDetailComponent);
+    modalRef.componentInstance.house = this.house;
   }
 
 }

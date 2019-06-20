@@ -1,0 +1,6 @@
+<div class="card" (click)="toDetail()">
+  <img src="{{(character.gender == 'Male')?'assets/ph.png':'assets/pm.png'}}" style="width:100%">
+  <div class="card__container">
+    <h4><b>{{(character.name)?character.name:character.aliases[0]}}</b></h4>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="board" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="300" (scrolled)="onBottom()">
+  <div *ngFor="let character of characters">
+    <comp-character [character]=character></comp-character>
+  </div>
+</div>
